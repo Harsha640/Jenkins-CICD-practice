@@ -28,6 +28,8 @@ Remove the old base image and add the below image in visual studio code.
 FROM eclipse-temurin:21 
 ```
 
+
+Ready to build the image
 ```
 docker build -t ultimate-cicd-pipeline:v1 .
 ```
@@ -159,6 +161,7 @@ The docker agent configuration is now successful.
 ### Configure a Sonar Server locally
 
 ```
+sudo su -
 apt install unzip
 adduser sonarqube
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
