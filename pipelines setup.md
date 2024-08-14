@@ -129,6 +129,30 @@ Jenkins Installation is Successful. You can now starting using the Jenkins
 Wait for the Jenkins to be restarted.
 
 
+## Next Steps
+
+### Configure a Sonar Server locally
+
+```
+sudo su -
+apt install unzip
+adduser sonarqube
+sudo su - sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+unzip *
+chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+./sonar.sh start
+```
+
+Hurray !! Now you can access the SonarQube Server on `http://<ip-address>:9000` 
+
+```
+sonarqube Login: admin
+sonarqube pass: admin
+```
+
 ## Docker Slave Configuration
 
 Run the below command to Install Docker
@@ -154,25 +178,3 @@ http://<ec2-instance-public-ip>:8080/restart
 ```
 
 The docker agent configuration is now successful.
-
-
-## Next Steps
-
-### Configure a Sonar Server locally
-
-```
-sudo su -
-apt install unzip
-adduser sonarqube
-sudo su - sonarqube
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
-unzip *
-chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
-chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
-cd sonarqube-9.4.0.54424/bin/linux-x86-64/
-./sonar.sh start
-```
-
-Hurray !! Now you can access the SonarQube Server on `http://<ip-address>:9000` 
-Login: admin
-pass: admin
