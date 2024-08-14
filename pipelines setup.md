@@ -158,7 +158,7 @@ sonarqube pass: admin
 Run the below command to Install Docker
 
 ```
-sudo apt update
+sudo su -
 sudo apt install docker.io
 ```
  
