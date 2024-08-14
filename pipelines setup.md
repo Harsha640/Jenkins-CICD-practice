@@ -23,7 +23,10 @@ mvn clean package
 Build the Docker Image
 
 Remove the old base image and add the below image in visual studio code.
+
+```
 FROM eclipse-temurin:21 
+```
 
 ```
 docker build -t ultimate-cicd-pipeline:v1 .
