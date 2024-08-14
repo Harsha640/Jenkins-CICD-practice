@@ -8,10 +8,10 @@ at the root directory of the repository.
 Checkout the repo and move to the directory
 
 ```
-git clone https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/
-cd /Users/ram/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/spring-boot-app
+git clone https://github.com/Harsha640/Jenkins-CICD-practice
+///cd /Users/ram/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/spring-boot-app///
 ```
-
+install in the spring-boot-app path
 Execute the Maven targets to generate the artifacts
 
 ```
