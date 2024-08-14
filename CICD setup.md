@@ -177,3 +177,13 @@ http://<ec2-instance-public-ip>:8080/restart
 ```
 
 The docker agent configuration is now successful.
+
+##Installing the minikube cluster 
+To remove the old files
+```
+minikube delete
+```
+To start the minikube
+```
+minikube start --memory=3920
+```
