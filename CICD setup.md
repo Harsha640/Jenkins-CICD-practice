@@ -125,7 +125,7 @@ sonarqube pass: admin
 
 ## Create a pipeline and add token and credentials.
 
-   - add Git repo in the pipeline. 
+   - add Git repo in the pipeline and add Git credentials with secret text file as "github" ID
    - add Sonarqube credentials with secret text file as "sonarqube" ID
    - add Dockerhub credentials with username & pass as "docker-cred" ID
      
