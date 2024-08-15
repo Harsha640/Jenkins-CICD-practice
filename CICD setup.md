@@ -113,11 +113,12 @@ sonarqube Login: admin
 sonarqube pass: admin
 ```
 
-## Need to add token and credentials 
+## Create a pipeline and add token and credentials.
 
-   - sonarqube
-   - Dockerhub
    - Git
+   - Sonarqube
+   - Dockerhub
+     
 
 ## Docker Slave Configuration
 
