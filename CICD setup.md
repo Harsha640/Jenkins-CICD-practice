@@ -148,7 +148,9 @@ systemctl restart docker
 ```
 
 ## Change the old sonarqube url with latest public IP in JenkinsFile
-
+```
+"http://<ec2-instance-public-ip>:9000"
+```
 
 Once you are done with the above steps, it is better to restart Jenkins.
 
