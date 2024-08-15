@@ -1,4 +1,14 @@
+## Applications and prerequisites 
 
+- java 
+- Jenkins
+- Maven
+- SonarQube
+- Docker
+- Docker Hub
+- Shell script
+- Argo CD
+- Kubernetes
 
 ### Installation on EC2 Instance
 
