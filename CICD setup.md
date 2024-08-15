@@ -1,44 +1,3 @@
-# Spring Boot based Java web application
-
-This is a simple Sprint Boot based Java application that can be built using Maven. Sprint Boot dependencies are handled using the pom.xml 
-at the root directory of the repository.
-
-## Execute the application locally and access it using your browser
-
-Checkout the repo and move to the directory
-
-```
-git clone https://github.com/Harsha640/Jenkins-CICD-practice
-///cd /Users/ram/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/spring-boot-app///
-```
-install in the spring-boot-app path
-Execute the Maven targets to generate the artifacts
-
-```
-mvn clean package
-```
-
-### The Docker way
-
-Build the Docker Image
-
-Remove the old base image and add the below image in visual studio code.
-
-```
-FROM eclipse-temurin:21 
-```
-
-
-Ready to build the image
-```
-docker build -t ultimate-cicd-pipeline:v1 .
-```
-
-```
-docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
-```
-
-Hurray !! Access the application on `http://<ip-address>:8010`
 
 
 ### Installation on EC2 Instance
@@ -49,6 +8,16 @@ Hurray !! Access the application on `http://<ip-address>:8010`
 - Go to AWS Console
 - Instances(running)
 - Launch instances
+
+**Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
+
+- EC2 > Instances > Click on <Instance-ID>
+- In the bottom tabs -> Click on Security
+- Security groups
+- Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed `All traffic`).
+
+<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
+
 
 
 ### Install Jenkins.
@@ -82,15 +51,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
-
-**Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
-
-- EC2 > Instances > Click on <Instance-ID>
-- In the bottom tabs -> Click on Security
-- Security groups
-- Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed `All traffic`).
-
-<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
 
 
 ### Login to Jenkins using the below URL:
@@ -209,3 +169,49 @@ kubectl get csv -n operators
 ```
 Copy to Clipboard
 To use it, checkout the custom resource definitions (CRDs) introduced by this operator to start using it.
+
+
+==============================================================================
+
+# Spring Boot based Java web application (Local host)
+
+This is a simple Sprint Boot based Java application that can be built using Maven. Sprint Boot dependencies are handled using the pom.xml 
+at the root directory of the repository.
+
+## Execute the application locally and access it using your browser
+
+Checkout the repo and move to the directory
+
+```
+git clone https://github.com/Harsha640/Jenkins-CICD-practice
+///cd /Users/ram/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/spring-boot-app///
+```
+install in the spring-boot-app path
+Execute the Maven targets to generate the artifacts
+
+```
+mvn clean package
+```
+
+### The Docker way
+
+Build the Docker Image
+
+Remove the old base image and add the below image in visual studio code.
+
+```
+FROM eclipse-temurin:21 
+```
+
+
+Ready to build the image
+```
+docker build -t ultimate-cicd-pipeline:v1 .
+```
+
+```
+docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
+```
+
+Hurray !! Access the application on `http://<ip-address>:8010`
+
