@@ -81,7 +81,7 @@ Jenkins Installation is Successful. You can now starting using the Jenkins
 
    - Log in to Jenkins.
    - Go to Manage Jenkins > Manage Plugins.
-   - In the Available tab, search for "Docker Pipeline".
+   - In the Available tab,search for "Docker Pipeline" and "SonarQube Scanner".
    - Select the plugin and click the Install button.
    - Restart Jenkins after the plugin is installed.
    
