@@ -113,6 +113,12 @@ sonarqube Login: admin
 sonarqube pass: admin
 ```
 
+## Need to add token and credentials 
+
+   - sonarqube
+   - Dockerhub
+   - Git
+
 ## Docker Slave Configuration
 
 Run the below command to Install Docker
