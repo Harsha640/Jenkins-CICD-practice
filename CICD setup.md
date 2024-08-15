@@ -147,7 +147,7 @@ usermod -aG docker ubuntu
 systemctl restart docker
 ```
 
-##Change the old sonarqube url with latest public IP in JenkinsFile
+## Change the old sonarqube url with latest public IP in JenkinsFile
 
 
 Once you are done with the above steps, it is better to restart Jenkins.
